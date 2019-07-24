@@ -170,17 +170,37 @@ NGS_FACTOR %>% tibble(select(Arithmetic.Mean_Suspended.particulate..TSP.:Arithme
 var(NGS_FACTOR$totcorr)
 
 
-AND_INT_MODEL<-summary(lm(as.numeric(AND_INT) ~ SEX + ETHNIC + AGE + WORK_ENVIOR + Arithmetic.Mean_Suspended.particulate..TSP.,data=NGS_FACTOR))
-AMY_INT_MODEL<-summary(lm(as.numeric(AA_INT) ~ SEX + ETHNIC + AGE + WORK_ENVIOR + Arithmetic.Mean_Suspended.particulate..TSP.,data=NGS_FACTOR))
-GALAX_INT_MODEL<-summary(lm(as.numeric(GAL_INT) ~ SEX + ETHNIC + AGE + WORK_ENVIOR + Arithmetic.Mean_Suspended.particulate..TSP.,data=NGS_FACTOR))
-ROSE_INT_MODEL<-summary(lm(as.numeric(ROSE_INT) ~ SEX + ETHNIC + AGE + WORK_ENVIOR + Arithmetic.Mean_Suspended.particulate..TSP.,data=NGS_FACTOR))
-MERCAP_INT_MODEL<-summary(lm(as.numeric(MER_INT) ~ SEX + ETHNIC + AGE + WORK_ENVIOR + Arithmetic.Mean_Suspended.particulate..TSP.,data=NGS_FACTOR))
-EUG_INT_MODEL<-summary(lm(as.numeric(EUG_INT) ~ SEX + ETHNIC + AGE + WORK_ENVIOR + Arithmetic.Mean_Suspended.particulate..TSP.,data=NGS_FACTOR))
+AND_INT_MODEL<-summary(lm(as.numeric(AND_INT) ~ SEX + ETHNIC + AGE + Arithmetic.Mean_Suspended.particulate..TSP.,data=NGS_FACTOR))
+AMY_INT_MODEL<-summary(lm(as.numeric(AA_INT) ~ SEX + ETHNIC + AGE +  Arithmetic.Mean_Suspended.particulate..TSP.,data=NGS_FACTOR))
+GALAX_INT_MODEL<-summary(lm(as.numeric(GAL_INT) ~ SEX + ETHNIC + AGE +  Arithmetic.Mean_Suspended.particulate..TSP.,data=NGS_FACTOR))
+ROSE_INT_MODEL<-summary(lm(as.numeric(ROSE_INT) ~ SEX + ETHNIC + AGE + Arithmetic.Mean_Suspended.particulate..TSP.,data=NGS_FACTOR))
+MERCAP_INT_MODEL<-summary(lm(as.numeric(MER_INT) ~ SEX + ETHNIC + AGE +  Arithmetic.Mean_Suspended.particulate..TSP.,data=NGS_FACTOR))
+EUG_INT_MODEL<-summary(lm(as.numeric(EUG_INT) ~ SEX + ETHNIC + AGE +  Arithmetic.Mean_Suspended.particulate..TSP.,data=NGS_FACTOR))
 
-
-AND_INT_MODEL
 AMY_INT_MODEL
 GALAX_INT_MODEL
 ROSE_INT_MODEL
 MERCAP_INT_MODEL
 EUG_INT_MODEL
+
+## AND_INT
+kable(AND_INT_MODEL$coefficients)
+
+#AMY_INT_MODEL
+kable(AMY_INT_MODE$coefficientsL)
+
+#GALAX_INT_MODEL
+kable(GALAX_INT_MODEL$coefficients)
+
+#ROSE_INT_MODEL
+kable(ROSE_INT_MODEL$coefficients)
+
+#MERCAP_INT_MODEL
+kable(MERCAP_INT_MODEL$coefficients)
+
+#EUG_INT_MODEL
+kable(EUG_INT_MODEL$coefficients)
+
+
+
+
